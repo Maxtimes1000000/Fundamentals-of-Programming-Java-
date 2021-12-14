@@ -4,8 +4,8 @@ Howdy. My name is Max S. and this program is just me going through and studying 
 This is also going to be my practice with being consistent about commiting things to GitHub
 
 Chapter 1: lines 26-60      Chapter 11:                 Chapter 21:
-Chapter 2: lines 61-106     Chapter 12:                 Chapter 22:
-Chapter 3:                  Chapter 13:                 Chapter 23:
+Chapter 2: lines 61-158     Chapter 12:                 Chapter 22:
+Chapter 3: lines 159-160    Chapter 13:                 Chapter 23:
 Chapter 4:                  Chapter 14:                 Chapter 24:
 Chapter 5:                  Chapter 15:
 Chapter 6:                  Chapter 16:
@@ -17,7 +17,7 @@ Chapter 10:                 Chapter 20:
 
 import java.text.DecimalFormat;
 import java.util.Scanner; // imports the Scanner class. This type of import is known as a specific import
-import java.util.*; //Imports all of the classes from the package java.util (More detail in Ch:2 pg:38)
+//import java.util.*; //Imports all of the classes from the package java.util  This is known as a wildcard import (More detail in Ch:2 pg:38)
 
 
 
@@ -59,7 +59,7 @@ class Main {
     System.out.println(""); //Just messing around with as many options for creating a new line as I can think of
     */
 //2------------------------------------------Chapter 2------------------------------------------------//
-   
+  /*  
     double radius; //Declaration of a variable named radius of variable type double
     double area;
 
@@ -81,7 +81,7 @@ class Main {
     System.out.print(area);
 
     System.out.print("\n\nPlease enter 3 numbers with spaces between each number: ");
-    double num1 = input.nextDouble(); //Creates a new variable "number1" of data type double and asigns the nextDouble that the user inputs to the variable "number1"
+    double num1 = input.nextDouble(); //Creates a new variable "num1" of data type double and asigns the nextDouble that the user inputs to the variable "num1"
     double num2 = input.nextDouble();
     double num3 = input.nextDouble();
 
@@ -99,10 +99,64 @@ class Main {
     System.out.printf("\nj = ");
     System.out.print(j);
     System.out.printf("\nk = " , k);
-    System.out.print(k);
+    System.out.println(k);
 
+    System.out.println(); //Just your friendly neighborhood new line here
+  
 
+    Scanner in = new Scanner(System.in); //creates the in scanner object
 
+    System.out.print("Enter a number and I will tell you its cube: ");
+    double num1 = in.nextDouble();
+
+    System.out.println();
+    System.out.print(num1);
+    System.out.print(" cubed = ");
+    System.out.println(Math.pow(num1,3));
+  */
+    //By default an integer literal is in decimal but theres a way to change that.
+    System.out.println(0B10101010); //The leading 0B || 0b means to read the rest of whats written as binary and output it in decimal
+    System.out.println(012345); //The leading 0 denotes octal after the 0 and outputs it in decimal
+    System.out.println(0xFFFF); //The leading 0x || 0X denotes hexadecimal for the rest and outputs in decimal
+
+    long totalMilliseconds = System.currentTimeMillis(); //gives variable "totalMilliseconds" value of number of milliseconds since UNIX epoch aka 01-01-1970 00:00:00 GMT
+    long totalSeconds = totalMilliseconds / 1000;
+    long currentSecond = totalSeconds % 60;
+    long totalMinutes = totalSeconds / 60;
+    long currentMinute = totalMinutes % 60;
+    long totalHour = totalMinutes / 60;
+    long currentHour = ((totalHour % 24) + 6) % 12; //+6 in order to adjust to Central Standard Time then 
+    
+    DecimalFormat ft = new DecimalFormat("00"); //This is the way to format the output so it doesn't do nonsense like this 13:8:2 when it should say 13:08:02
+    System.out.println("\nThe Current Time is " + ft.format(currentHour) + ":" + ft.format(currentMinute) + ":" + ft.format(currentSecond) + " CST");
+
+    Scanner input = new Scanner(System.in);
+    System.out.print("\n\nEnter a number between 1 and 1000: "); //Chapter: 2  Question: 2.6
+    int number = input.nextInt();
+
+    int sumOfDigits = ((number/100)+((number%100)/10)+(number%10)); //NO SCRATCH PAPER SONNNNNNN!!!!! Also this sums the digits of the input
+
+    System.out.println("The sum of the digits is " + sumOfDigits);
+
+    System.out.print("\n\nEnter the monthly saving amount: ");
+    double number2 = input.nextDouble();
+
+    double month1, month2, month3, month4, month5, month6;
+    
+    month1 = (number2 * (1.0 + 0.00417));
+    System.out.printf("\n%.3f After one month with 5%% annual interest" , month1);
+    month2 = ((number2 + month1) * (1.0 + 0.00417));
+    System.out.printf("\n%.3f After two months with 5%% annual interest" , month2);
+    month3 = ((number2 + month2) * (1.0 + 0.00417));
+    System.out.printf("\n%.3f After three months with 5%% annual interest" , month3);
+    month4 = ((number2 + month3) * (1.0 + 0.00417));
+    System.out.printf("\n%.3f After four months with 5%% annual interest" , month4);
+    month5 = ((number2 + month4) * (1.0 + 0.00417));
+    System.out.printf("\n%.3f After five months with 5%% annual interest" , month5);
+    month6 = ((number2 + month5) * (1.0 + 0.00417));
+    System.out.printf("\n%.3f After six months with 5%% annual interest" , month6);
+
+//-------------------------------------------Chapter 3------------------------------------------------//
 
   }
 }
