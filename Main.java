@@ -1,18 +1,18 @@
-/*
-Start Date: 12/12/2021          Latest Change Date: 12/13/2021          IDE:repl.it also known as replit.com
-Howdy. My name is Max S. and this program is just me going through and studying the Intoduction to JAVA Programming and Data Structures Comprehensive Version by Y. Daniel Liang 12th Edition
-This is also going to be my practice with being consistent about commiting things to GitHub
+/*  Read Me
+  Start Date: 12/12/2021        IDE:repl.it also known as replit.com
+  Howdy. My name is Max S. and this program is just me going through and studying the Intoduction to JAVA Programming and Data Structures Comprehensive Version by Y. Daniel Liang 12th Edition
+  This is also going to be my practice with being consistent about commiting things to GitHub
 
-Chapter 1: lines 26-60      Chapter 11:                 Chapter 21:
-Chapter 2: lines 61-158     Chapter 12:                 Chapter 22:
-Chapter 3: lines 159-160    Chapter 13:                 Chapter 23:
-Chapter 4:                  Chapter 14:                 Chapter 24:
-Chapter 5:                  Chapter 15:
-Chapter 6:                  Chapter 16:
-Chapter 7:                  Chapter 17:
-Chapter 8:                  Chapter 18:
-Chapter 9:                  Chapter 19:
-Chapter 10:                 Chapter 20:
+  Chapter 1: lines 26-60      Chapter 11:                 Chapter 21:
+  Chapter 2: lines 61-159     Chapter 12:                 Chapter 22:
+  Chapter 3: lines 160-176    Chapter 13:                 Chapter 23:
+  Chapter 4:                  Chapter 14:                 Chapter 24:
+  Chapter 5:                  Chapter 15:
+  Chapter 6:                  Chapter 16:
+  Chapter 7:                  Chapter 17:
+  Chapter 8:                  Chapter 18:
+  Chapter 9:                  Chapter 19:
+  Chapter 10:                 Chapter 20:
 */
 
 import java.text.DecimalFormat;
@@ -114,6 +114,7 @@ class Main {
     System.out.print(" cubed = ");
     System.out.println(Math.pow(num1,3));
   */
+  /*
     //By default an integer literal is in decimal but theres a way to change that.
     System.out.println(0B10101010); //The leading 0B || 0b means to read the rest of whats written as binary and output it in decimal
     System.out.println(012345); //The leading 0 denotes octal after the 0 and outputs it in decimal
@@ -138,7 +139,7 @@ class Main {
 
     System.out.println("The sum of the digits is " + sumOfDigits);
 
-    System.out.print("\n\nEnter the monthly saving amount: ");
+    System.out.print("\n\nEnter the monthly saving amount: "); //Chapter: 2 Question: 2.13
     double number2 = input.nextDouble();
 
     double month1, month2, month3, month4, month5, month6;
@@ -155,8 +156,24 @@ class Main {
     System.out.printf("\n%.3f After five months with 5%% annual interest" , month5);
     month6 = ((number2 + month5) * (1.0 + 0.00417));
     System.out.printf("\n%.3f After six months with 5%% annual interest" , month6);
-
+  */
 //-------------------------------------------Chapter 3------------------------------------------------//
+    //ask Mark which flowchart software he recommends
+    Scanner input = new Scanner(System.in);
+    System.out.print("\nEnter a grade from 0-100: ");
+    int grade = input.nextInt();
 
+    if(grade >= 90)
+      System.out.println("You got an A!");
+    else if(grade >= 80)
+      System.out.println("You got a B");
+    else if(grade >= 70)
+      System.out.println("You got a C");
+    else if(grade >= 60)
+      System.out.println("You got a D");
+    else
+      System.out.println("You got an F");
+
+//---    
   }
 }
