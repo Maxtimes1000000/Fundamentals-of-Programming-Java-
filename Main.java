@@ -5,7 +5,7 @@
 
   Chapter 1: lines 26-60      Chapter 11:                 Chapter 21:
   Chapter 2: lines 61-159     Chapter 12:                 Chapter 22:
-  Chapter 3: lines 160-176    Chapter 13:                 Chapter 23:
+  Chapter 3: lines 160-220    Chapter 13:                 Chapter 23:
   Chapter 4:                  Chapter 14:                 Chapter 24:
   Chapter 5:                  Chapter 15:
   Chapter 6:                  Chapter 16:
@@ -159,6 +159,7 @@ class Main {
   */
 //-------------------------------------------Chapter 3------------------------------------------------//
     //ask Mark which flowchart software he recommends
+  /*
     Scanner input = new Scanner(System.in);
     System.out.print("\nEnter a grade from 0-100: ");
     int grade = input.nextInt();
@@ -173,6 +174,49 @@ class Main {
       System.out.println("You got a D");
     else
       System.out.println("You got an F");
+
+    int generatedMonth = (int)(Math.random() * 13); //Chapter: 3  Question: 3.4
+
+    System.out.print("The randomly generated month is ");
+    switch (generatedMonth) {
+      case 1: System.out.println("January"); break;
+      case 2: System.out.println("February"); break;
+      case 3: System.out.println("March"); break;
+      case 4: System.out.println("April"); break;
+      case 5: System.out.println("May"); break;
+      case 6: System.out.println("June"); break;
+      case 7: System.out.println("July"); break;
+      case 8: System.out.println("August"); break;
+      case 9: System.out.println("September"); break;
+      case 10: System.out.println("October"); break;
+      case 11: System.out.println("November"); break;
+      case 12: System.out.println("December"); break;
+    }
+  */
+    Scanner input = new Scanner(System.in); //Chapter: 3 Question: 3.15
+    System.out.print("\n\n--------------------This is the lottery!--------------------\n| 1st Prize: $10,000 - 2nd Prize: $3000 - 3rd Prize: $1000 |\n|                                                          |\n|       Please enter a 3 digit number to play!: ");
+    int pNum = input.nextInt();
+
+    int dNum = (int)(Math.random() * 1000); //Randomly generates 3 digit number
+    System.out.print("|                  The dealer chose the number: " + dNum + "        |");
+
+    System.out.print("\n|                       Player number digit 1: ");
+    System.out.print((pNum/100));
+    System.out.print("           |\n|                       Player number digit 2: ");
+    System.out.print((pNum%100)/10);
+    System.out.print("           |\n|                       Player number digit 3: ");
+    System.out.print((pNum%10));
+    System.out.print("           |");
+
+    if(pNum == dNum){
+      System.out.print("\n|                                                          |\n|   You won the 1st Prize of $10,000!!! Please see cashier  |");
+    }else if((((pNum%10)+((pNum%100)/10)+(pNum/100))*((pNum%10)*((pNum%100)/10)*(pNum/100))) == (((dNum%10)+((dNum%100)/10)+(dNum/100))*((dNum%10)*((dNum%100)/10)*(dNum/100)))){
+      System.out.print("\n|                                                          |\n|  You won the 2nd Prize of $3,000!!! Please see cashier   |");
+    }else if(((pNum/100) == (dNum/100)) || ((pNum/100) == ((dNum%100)/10)) || ((pNum/100) == (dNum%10)) || (((pNum%100)/10) == (dNum/100)) || (((pNum%100)/10) == ((dNum%100)/10)) || (((pNum%100)/10) == (dNum%10)) || (((pNum%10) == (dNum/100)) || ((pNum%10) == ((dNum%100)/10)) || ((pNum%10) == (dNum%10)))){
+      System.out.print("\n|                                                          |\n|   You won the 3rd Prize of $1,000!!! Please see cashier  |");
+    }else{
+      System.out.print("\n|                                                          |\n|                    You get nothing! lol                  |");
+    }
 
 //---    
   }
